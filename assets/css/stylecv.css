@@ -1,0 +1,183 @@
+:root {
+         --primary-color: #f7f7f7;
+         --secondary-color: #349434;
+         --text-color-1: #0c0c0c;
+         --text-color-2: #fcfbfb;
+         --accent-color: #64b5f6;
+         --bg-color: #f4f7f6;
+         --whitecolor: #fff;
+         --surface-color: #ffffff;
+         --shadow-color: rgba(33, 91, 130, 0.18);
+         --border-radius: 22px;
+         --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      *{ box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      body{ 
+         font-family: 'Arial', sans-serif;
+         line-height: 1.6;
+         color: var(--text-color-1);
+         background-color: var(--bg-color);
+         padding: 20px;
+      }
+
+      .container-cv{
+         max-width: 900px;
+         margin: 0 auto;
+         background: var(--bg-color);
+         border-radius: var(--border-radius);
+         box-shadow: 0 20px 45px var(--shadow-color);
+         overflow-y: auto;
+      }
+
+      header {
+         background-color: rgb(67, 63, 64);
+         color: var(--primary-color);
+         padding: 40px;
+         border-radius: 22px 22px 0 0; 
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         gap: 20px;
+      }
+
+      header h2 { 
+         font-size: 2.2em;
+         letter-spacing: 2px;
+         text-transform: uppercase;
+         margin-bottom: 5px;
+      }
+
+      header p,
+      .header-txt p {
+         color: #ffffff;
+          margin-bottom: 10px;
+      }
+
+      .header-txt a {
+         color: #ffffff;
+         text-decoration: underline;
+         border-bottom: 1px solid rgba(232, 244, 255, 0.5);
+         transition: color 0.2s ease, border-color 0.2s ease;
+      }
+
+      .header-txt a:hover {
+         color: var(--accent-color);
+         border-color: var(--accent-color);
+      }
+
+.nav-list {
+   list-style: none;
+   display: flex;
+   justify-content: center; 
+   gap: 30px;
+
+}
+
+nav {
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+   padding: 15px 20px;
+   background-color: #1a1a2e;
+   text-align: center;
+}
+
+nav a {
+   color: white;
+   text-decoration: none;
+   font-weight: bold;
+}
+
+nav a:hover {
+   color: #e94560;
+}
+      
+      main {
+         padding: 32px 0;
+         display: grid;
+         gap: 28px;
+      }
+
+      section {
+         background: #ffffff;
+         border: 1px solid rgba(33, 91, 130, 0.1);
+         border-radius: 20px;
+         padding: 28px;
+         box-shadow: 0 18px 30px rgba(33, 91, 130, 0.05);
+      }
+
+      section h1 {
+         font-size: 1.85rem;
+         color: var(--text-color-1);
+         margin-bottom: 16px;
+      }
+
+      section p {
+         margin-bottom: 14px;
+         color: var(--text-color-1);
+         line-height: 1.8;
+      }
+
+      .profile-img{
+         width: 150px;
+         height: 150px;
+         border-radius: 50%;
+         border: 4px solid var(--text-color);
+         object-fit: cover;
+         background-color: var(--bg-color);
+         object-fit: cover;
+         background-color: var(--bg-color);
+         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+      }
+
+      .BotoneCertificado,
+      .BotonCertificado {
+         display: inline-flex;
+         align-items: center;
+         gap: 8px;
+         padding: 12px 22px;
+         margin-right: 12px;
+         margin-top: 10px;
+         background-color: var(--secondary-color); 
+         color: white !important;
+         text-decoration: none;
+         border-radius: 999px;
+         border: 1px solid rgba(255, 255, 255, 0.2);
+         cursor: pointer;
+         transition: all 0.3s ease; 
+      }
+
+        .BotonCertificado:hover {
+         background-color: #ffffff !important; 
+         color: var(--secondary-color) !important;           
+         transform: translateY(-3px) scale(1.05); 
+         box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); 
+      }
+
+      footer{
+         background: #2d2a2b;
+         color: #ffffff;
+         text-align: center;
+         padding: 30px 16px;
+         border-top: 1px solid rgba(255, 255, 255, 0.1);
+         border-radius: 0 0 22px 22px; /* Redondeado solo abajo */
+         font-size: 0.95rem;
+      }
+
+      @media (min-width: 768px){
+         header {
+            flex-direction: row;
+            text-align: left;
+            justify-content: flex-start;
+            padding: 40px 60px;
+         }
+         .header-txt{
+            margin-left: 20px;
+         }
+      }

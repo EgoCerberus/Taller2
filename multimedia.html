@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taller 2</title>
+    <!--favicon-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/logosena.png"
+      type="image/x-icon"
+    />
+    <!-- seo tags-->
+    <meta name="author" content="Yeison Eduado Escobar Preciado" />
+    <meta name="description" content="Taller 2 de maquetación web" />
+    <meta name="keywords" content="TALLER, taller, Taller" />
+    <!--Optimization Tags-->
+    <meta name="Theme-color" content="#F5F562" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="handheldFriendly" content="true" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-traslucent"
+    />
+    <link rel="stylesheet" href="assets/css/style1.css" />
+
+    <style>
+      /* Element selector -- establecer <p> el color de todos los elementos en dimgray.*/
+      p {
+        color: dimgray;
+      }
+      /* Class selector -- utilice un selector de clase para establecer .highlightel
+            color de fondo amarillo.*/
+      .highlight {
+        background-color: yellow;
+      }
+      /* id selector -- utilice un selector de id para establecer el #intro el tamaño de 
+            fuente a 20px.*/
+      #intro {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 
+      1. Crear un CSS externo ✓
+      2. Incluir CSS externo en el html ✓
+      3. Crear un div con clase "container" ✓
+      4. Dentro del div crear un header con clase "header" y un h1 con el texto "Taller 2"
+      5. Crear un nav con clase "nav" y dentro de este crear una lista desordenada con 3 elementos de lista,
+        cada uno con un enlace a una sección del sitio (Inicio, Servicios, Contacto)
+      6. Crear un main con clase "main" y dentro de esta crear un aticulo con clase "article" que contenga
+        un h2 con el texto "Bienvenido al Taller 2" y un párrafo con texto de relleno
+      7. Crear un footer con clase "footer" y dentro de este crear un párrafo con el texto 
+        "Nombres y Apellidos. Todos los derechos reservados@ 2026."
+      8. Aplicar estilos al css externo para que el sitio tenga un diseño atractivo y sea responsivo.
+      9. Aplicar un reset utilizando el selector universal (*) para eliminar márgenes y padding por defecto.
+      10. Utilizar variables CSS en :root para definir colores, fuentes y espaciados que se usaran en todo el sitio. 
+      11. Aplicar box-sizing: border-box a todos los elementos para controlar el tamaño de los elementos de manera mas predecible, 
+        y utilizar flexbox para el layout del nav y otros contenedores
+      -->
+
+    <header class="header">
+    <h1>Taller 2</h1>
+  </header>
+
+    <nav class="nav">
+    <ul class="nav-list">
+        <li><a href="./">Inicio</a></li>
+        <li><a href="grid.html">Grid</a></li>
+        <li><a href="multimedia.html">Multimedia</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="cv.html">Curriculum Vitae</a></li>
+    </ul>
+    </nav>
+
+
+  <div class="container">
+    <main class="main">
+      <article class="article">
+        <h2>Grid Layout</h2>
+        <p>A Grid Layout must have a parent element with the <em>display</em> property 
+          set to <em>grid</em> or <em>inline-grid</em>.</p>
+
+          <p>Direct child element(s) of the grid container automatically becomes grid items.</p>
+      </article>
+    </main>
+  </div> 
+
+    <div class="grid_multimedia">
+
+      <div>
+            <div class="container">
+              <main class="main">
+                <article class="article">
+                  <h2><code>&lt;audio&gt; Tag</code></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
+                        iure, sed explicabo nemo dolorem,fuga fugiat officiis unde harum 
+                        quisquam rem iste veritatis nesciunt consectetur ab obcaecati 
+                        acilis numquam veniam!</p>
+                  </article>
+              </main>
+            </div>
+      </div>
+
+      <div>2</div>
+      <div>3</div>  
+
+      <div>
+            <div class="container">  
+                <main class="main">
+                    <article class="article">
+                        <h2><code>&lt;audio&gt; Tag</code></h2>
+                            <p>Uso de la etiqueta &lt;audio&gt; con un archivo de local</p>
+                            <audio controls autoplay loop>
+                              <source src="assets/audio/audio_fachero.mp3" type="audio/mpeg">
+                                  Tu navegador no soporta el elemento de audio.
+                              </audio>
+                      </article>
+              </div>
+      </div>
+
+      <div>
+        <iframe width="400" height="225"
+        src="https://www.youtube.com/embed/WQO-aOdJLiw?si=_PJYAX6Q1iyOpTJ5"
+        src="https://www.youtube.com/embed/WQO-aOdJLiw?si=_PJYAX6Q1iyOpTJ5"
+                Your browser does not support HTML5 video.
+                allowfullscreen>
+        </iframe>
+      </div>
+      <div>6</div>
+    </div>
+
+    <footer class="footer">
+      <p>Yeison Eduado Escobar Preciado. Todos los derechos reservados@ 2026.</p>
+    </footer>
+  
+  </body>
+</html>
