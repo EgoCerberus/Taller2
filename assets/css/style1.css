@@ -15,6 +15,7 @@
   --surface-color: #ffffff;
   --shadow-color: rgba(33, 91, 130, 0.18);
   --border-radius: 22px;
+  
 
   /* Tipografía y sistemas de diseño */
   --font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
@@ -86,25 +87,35 @@ nav a:hover {
 }
 
 .article h2 {
-  text-align: left;
+  text-align: center; 
   padding-bottom: var(--spacing-sm); /* Espacio entre el texto y la línea */
-  padding-left: 0px;
   margin-bottom: var(--spacing-md); /* Espacio entre la línea y el párrafo */
-  border-bottom: 1px solid var(--accent-color); /* Línea fina usando tu color de acento */
-  color: var(--text-color-1);
+  border-bottom: 1px solid var(--accent-color); /* Línea */
+  color: #0056b3; 
   font-family: var(--font-family);
-}
-
-.main {
-  padding: var(--spacing-lg) var(--spacing-md);
 }
 
 p {
   color: var(--text-color-1);
   font-family: var(--font-family);
-  line-height: 1.7;
+  line-height: 1.6;
   padding: 0;
 }
+
+.article p {
+  text-align: center; 
+  color: #555555; 
+  font-size: 0.9rem;
+  max-width: 800px; 
+  margin: 0 auto var(--spacing-md) auto; 
+}
+
+.main {
+  padding: 40px;
+}
+
+
+
 
 /*==================*/
 /*       Grid       */
@@ -220,6 +231,82 @@ p {
   justify-content: space-between;
   align-items: center;
 }
+
+/*==================*/
+/*     box-model    */
+/*==================*/
+
+.box-model-exercise {
+  padding: 40px;
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  margin-bottom: 30px;
+}
+
+.box-model-exercise h2 {
+  color: #0056b3;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.box-description {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Capas del Modelo de Caja Anidadas */
+.layer-margin, .layer-border, .layer-padding, .layer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Estilo general para las etiquetas de texto internas */
+.layer-margin > span, 
+.layer-border > span, 
+.layer-padding > span {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.85rem;
+  padding: 8px 0;
+}
+
+/* 1. Capa de Margen (Turquesa) */
+.layer-margin {
+  background-color: #12d3b4;
+  padding: 0 20px 20px 20px; /* Simula el espacio del margen inferior/lateral */
+}
+
+/* 2. Capa de Borde (Rojo / Coral) */
+.layer-border {
+  background-color: #db5252;
+  padding: 0 5px 5px 5px; /* Simula el grosor del borde */
+}
+
+/* 3. Capa de Padding (Rosado / Magenta) */
+.layer-padding {
+  background-color: #e04cb2;
+  padding: 0 20px 20px 20px; /* Simula el espacio del padding */
+}
+
+/* 4. Capa de Contenido (Gris) */
+.layer-content {
+  background-color: #9c8e8e;
+  padding: 40px 20px; /* Le da altura al centro */
+}
+
+
+
+
+
 
 /*==================*/
 /*  Multimedia Grid */
