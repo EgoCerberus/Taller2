@@ -15,7 +15,6 @@
   --surface-color: #ffffff;
   --shadow-color: rgba(33, 91, 130, 0.18);
   --border-radius: 22px;
-  
 
   /* Tipografía y sistemas de diseño */
   --font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
@@ -62,6 +61,15 @@ nav {
   background-color: #1a1a2e;
   text-align: center;
 }
+
+.nav-grid {
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  padding: 0;
+  gap: 0;
+}
+
 nav a {
   color: white;
   text-decoration: none;
@@ -87,11 +95,11 @@ nav a:hover {
 }
 
 .article h2 {
-  text-align: center; 
+  text-align: center;
   padding-bottom: var(--spacing-sm); /* Espacio entre el texto y la línea */
   margin-bottom: var(--spacing-md); /* Espacio entre la línea y el párrafo */
   border-bottom: 1px solid var(--accent-color); /* Línea */
-  color: #0056b3; 
+  color: #0056b3;
   font-family: var(--font-family);
 }
 
@@ -103,19 +111,16 @@ p {
 }
 
 .article p {
-  text-align: center; 
-  color: #555555; 
+  text-align: center;
+  color: #555555;
   font-size: 0.9rem;
-  max-width: 800px; 
-  margin: 0 auto var(--spacing-md) auto; 
+  max-width: 800px;
+  margin: 0 auto var(--spacing-md) auto;
 }
 
 .main {
   padding: 40px;
 }
-
-
-
 
 /*==================*/
 /*       Grid       */
@@ -124,8 +129,9 @@ p {
 .grid {
   margin-top: var(--espaciado-lg);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: 220px 1fr 1fr;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 8px;
   background-color: #f5f7fa;
   padding: 10px;
 }
@@ -185,28 +191,41 @@ p {
 
 /* Componente del grid interior */
 
+/*==================*/
+/*     contacto     */
+/*==================*/
+
 .header-cell {
   background-color: #326bc5;
-  min-height: 0px;
   grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
 }
+
 .aside-cell {
   background-color: #714dc3;
-  min-height: 0px;
   grid-row: 2 / 4;
   grid-column: 1 / 2;
   align-items: center;
   text-align: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 24px 16px;
+  gap: 12px;
 }
 .main-cell {
   background-color: #0ea5e9;
-  min-height: 0px;
   grid-column: 2 / 4;
   grid-row: 2 / 3;
   color: #ffffff;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px 24px;
+  gap: 12px;
 }
 .section-cell {
   background-color: #149586;
@@ -223,6 +242,34 @@ p {
   grid-row: 3;
   color: #ffffff;
 }
+
+.main-cell img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.section1,
+.section2 {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 16px;
+  gap: 10px;
+}
+
+.section1 button,
+.section2 button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 5px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 .footer-cell {
   background-color: #64748b;
   min-height: 0px;
@@ -230,6 +277,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 12px 20px;
 }
 
 /*==================*/
@@ -260,7 +308,10 @@ p {
 }
 
 /* Capas del Modelo de Caja Anidadas */
-.layer-margin, .layer-border, .layer-padding, .layer-content {
+.layer-margin,
+.layer-border,
+.layer-padding,
+.layer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -270,8 +321,8 @@ p {
 }
 
 /* Estilo general para las etiquetas de texto internas */
-.layer-margin > span, 
-.layer-border > span, 
+.layer-margin > span,
+.layer-border > span,
 .layer-padding > span {
   color: #ffffff;
   font-weight: bold;
@@ -302,11 +353,6 @@ p {
   background-color: #9c8e8e;
   padding: 40px 20px; /* Le da altura al centro */
 }
-
-
-
-
-
 
 /*==================*/
 /*  Multimedia Grid */
